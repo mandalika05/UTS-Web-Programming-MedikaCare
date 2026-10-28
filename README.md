@@ -455,3 +455,47 @@ Screenshot harus diambil dari aplikasi yang benar-benar dijalankan dan disimpan 
 ## 14. Lisensi dan Penggunaan
 
 Apotek MedikaCare dikembangkan untuk keperluan akademik sebagai proyek UTS Web Programming 2. Penggunaan dan distribusi kode mengikuti ketentuan tugas serta lisensi dependensi yang digunakan.
+
+## Dokumentasi Tampilan Aplikasi MedikaCare
+
+Berikut adalah dokumentasi tampilan aplikasi MedikaCare.
+
+### 1. Halaman Login
+![Halaman Login](docs/screenshots/01-login.png)
+
+### 2. Dashboard Admin
+![Dashboard Admin](docs/screenshots/02-dashboard-admin.png)
+
+### 3. Daftar Produk
+![Daftar Produk](docs/screenshots/03-produk.png)
+
+### 4. Form Pembelian
+![Form Pembelian](docs/screenshots/04-pembelian-baru.png)
+
+### 5. Form Penjualan
+![Form Penjualan](docs/screenshots/05-penjualan-baru.png)
+
+### 6. Struk Penjualan
+![Struk Penjualan](docs/screenshots/06-struk.png)
+
+### 7. Katalog Produk Pelanggan
+![Katalog Produk Pelanggan](docs/screenshots/07-katalog.png)
+
+### 8. Keranjang Belanja
+![Keranjang Belanja](docs/screenshots/08-keranjang.png)
+
+### 9. Detail Pesanan
+![Detail Pesanan](docs/screenshots/09-detail-pesanan.png)
+
+### 10. Laporan Penjualan
+![Laporan Penjualan](docs/screenshots/10-laporan.png)
+
+### 11. Manajemen Pengguna
+![Manajemen Pengguna](docs/screenshots/11-pengguna.png)
+
+### 12. Hasil Pengujian
+Pengujian aplikasi dijalankan menggunakan perintah `php artisan test`.
+
+Hasil pengujian: **46 tests passed (165 assertions)**.
+
+![Hasil Pengujian Laravel](docs/screenshots/12-tes-hijau.png)
