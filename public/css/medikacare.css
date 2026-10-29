@@ -2318,3 +2318,312 @@ gap: 16px;
         background: #7ab6a7;
     }
 }
+
+/* ====== pembelian: produk baru ====== */
+.mode-switch {
+    display: inline-flex;
+    padding: 3px;
+    margin-bottom: .5rem;
+    background: #E6F1EE;
+    border-radius: 999px;
+}
+.mode-btn {
+    border: none;
+    background: transparent;
+    padding: .3rem .85rem;
+    border-radius: 999px;
+    font-size: .78rem;
+    font-weight: 700;
+    color: #4d625e;
+}
+.mode-btn.active {
+    background: #fff;
+    color: var(--mc-teal-dark);
+    box-shadow: 0 2px 8px rgba(11, 110, 95, .15);
+}
+.new-box {
+    grid-column: 1 / -1;
+    margin-top: .25rem;
+    padding: 1rem;
+    background: #fff;
+    border: 1px dashed #BFE0D6;
+    border-radius: 16px;
+}
+.item-row .new-hint { margin-left: .5rem; }
+
+/* ====== PERBAIKAN TATA LETAK PEMBELIAN BARU ====== */
+
+.item-row {
+    grid-template-columns:
+        minmax(230px, 1.7fr)
+        minmax(90px, 0.75fr)
+        minmax(130px, 1.1fr)
+        minmax(100px, 1fr)
+        44px;
+    gap: 0.65rem;
+    align-items: start;
+}
+
+.item-row .cell-product {
+    min-width: 0;
+}
+
+.item-row .mode-switch {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: max-content;
+    max-width: 100%;
+    gap: 2px;
+}
+
+.item-row .mode-btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 0.4rem 0.55rem;
+    font-size: 0.72rem;
+}
+
+.item-row .f-product,
+.item-row .f-qty,
+.item-row .f-cost {
+    width: 100%;
+    min-width: 0;
+}
+
+.item-row .sub-val {
+    white-space: nowrap;
+}
+
+.item-row .stock-hint,
+.item-row .new-hint {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 1199.98px) {
+    .item-row {
+        grid-template-columns: minmax(200px, 1.5fr) 90px minmax(120px, 1fr) 100px 38px;
+        gap: 0.5rem;
+        padding: 0.75rem;
+    }
+
+    .item-row .mode-btn {
+        padding: 0.35rem 0.4rem;
+        font-size: 0.68rem;
+    }
+
+    .item-row .btn-remove {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .item-row {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 0.75rem;
+    }
+
+    .item-row .cell-product {
+        grid-column: 1 / -1;
+    }
+
+    .item-row > div:not(.cell-product):not(.cell-remove) {
+        padding-top: 0;
+    }
+
+    .item-row .cell-remove {
+        grid-column: 1 / -1;
+        padding-top: 0;
+        text-align: right;
+    }
+}
+
+/* ===== PERBAIKAN TAMPILAN PEMBELIAN MEDIKACARE ===== */
+
+/* Rapikan jarak dan lebar kolom */
+.item-row {
+    grid-template-columns:
+        minmax(240px, 2fr)
+        minmax(90px, 0.7fr)
+        minmax(130px, 1fr)
+        minmax(110px, 0.9fr)
+        44px;
+    gap: 12px;
+    align-items: start;
+}
+
+/* Cegah isi kolom melebar dan menimpa kolom lain */
+.item-row > div {
+    min-width: 0;
+}
+
+.item-row .cell-product,
+.item-row .cell-product select,
+.item-row .cell-product .form-select,
+.item-row input,
+.item-row select {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Rapikan tombol pilihan produk */
+.item-row .mode-switch {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.item-row .mode-btn {
+    padding: 7px 10px;
+    font-size: 12px;
+    line-height: 1.4;
+    white-space: normal;
+}
+
+/* Pendekkan dan rapikan tulisan bantuan */
+.item-row .stock-hint,
+.item-row .new-hint {
+    display: block;
+    margin: 6px 0 0;
+    font-size: 12px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+/* Rapikan subtotal */
+.item-row .sub-val {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.5;
+}
+
+/* Jaga tombol hapus tetap rapi */
+.item-row .cell-remove {
+    min-width: 0;
+    text-align: center;
+}
+
+/* Tampilan laptop dan tablet */
+@media (max-width: 1200px) {
+    .item-row {
+        grid-template-columns:
+            minmax(200px, 1.7fr)
+            minmax(80px, 0.7fr)
+            minmax(110px, 1fr)
+            minmax(95px, 0.9fr)
+            40px;
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .item-row .mode-btn {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+}
+
+/* Tampilan layar kecil */
+@media (max-width: 768px) {
+    .item-row {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .item-row .cell-product {
+        grid-column: 1 / -1;
+    }
+
+    .item-row .cell-remove {
+        grid-column: 1 / -1;
+        text-align: right;
+    }
+
+    .item-row .new-box {
+        grid-column: 1 / -1;
+        min-width: 0;
+    }
+}
+
+
+/* ===== FIX AKHIR: KOLOM STOK MINIMUM DAN SUBTOTAL ===== */
+
+/* Pastikan tabel tidak melebar keluar dari kartu */
+.item-row {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    grid-template-columns:
+        minmax(0, 2fr)
+        minmax(65px, 0.65fr)
+        minmax(0, 0.9fr)
+        minmax(0, 0.85fr)
+        36px;
+    gap: 8px;
+}
+
+/* Cegah semua kolom mendorong tabel melebar */
+.item-row > div {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Input stok minimum, jumlah, dan harga */
+.item-row input,
+.item-row select {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Cegah subtotal dengan banyak angka memanjang */
+.item-row .sub-val {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    font-size: 13px;
+    line-height: 1.4;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+/* Rapikan teks stok dan keterangan produk */
+.item-row .stock-hint,
+.item-row .new-hint {
+    max-width: 100%;
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+/* Jangan sampai tombol hapus keluar dari tabel */
+.item-row .cell-remove {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    text-align: center;
+}
+
+/* Sesuaikan jarak pada layar lebih kecil */
+@media (max-width: 1200px) {
+    .item-row {
+        gap: 6px;
+        padding: 10px;
+    }
+
+    .item-row .sub-val {
+        font-size: 12px;
+    }
+}
